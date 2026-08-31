@@ -29,18 +29,36 @@
         {
           "title": "Knob Mapping",
           "lines": [
-            "Knob 1: Preset",
-            "Knob 2: Volume",
-            "Knob 3: Bend Range"
+            "Main page knobs:",
+            " 1 Cutoff",
+            " 2 Resonance",
+            " 3 Env Amt",
+            " 4 Attack",
+            " 5 Decay",
+            " 6 Sustain",
+            " 7 Release",
+            " 8 Volume",
+            "",
+            "Each submenu below",
+            "has its own four",
+            "knobs; any extra",
+            "params follow on",
+            "later pages."
           ]
         },
         {
           "title": "Oscillator",
           "lines": [
+            "Knobs: Saw, Pulse,",
+            "Sub, Noise.",
+            "",
             "Saw: sawtooth level",
             "Pulse: pulse level",
             "Sub: sub-osc level",
             "Noise: noise level",
+            "White Noise: Off/On",
+            " (extra white noise",
+            "  layer)",
             "",
             "Sub Mode:",
             " -2 Oct 50% PW",
@@ -56,13 +74,18 @@
             " Manual: fixed PW",
             " LFO: LFO modulates",
             "",
-            "PWM Depth: mod amt"
+            "PWM Depth: LFO amt",
+            "PWM Env Depth: env",
+            " amt, Env mode only"
           ]
         },
         {
           "title": "Filter",
           "lines": [
             "4-pole lowpass.",
+            "Knobs: Cutoff,",
+            "Resonance, Env Amt,",
+            "Key Follow.",
             "",
             "Cutoff: frequency",
             "Resonance: 0-1.2",
@@ -75,17 +98,18 @@
             "Velocity Sens:",
             " velocity to cutoff",
             "",
-            "Env Polarity:",
-            " Positive or",
-            " Negative (invert)",
-            "",
-            "Full Range: sweep",
-            " entire 0-20kHz"
+            "Env Polarity and",
+            "Full Range live on",
+            "the Advanced page."
           ]
         },
         {
           "title": "Envelopes",
           "lines": [
+            "Two ADSR envelopes,",
+            "each with its own",
+            "four knobs.",
+            "",
             "Amp Envelope:",
             " Attack: 1ms-4s",
             " Decay: 1ms-6s",
@@ -98,15 +122,19 @@
             " F.Sustain: 0-100%",
             " F.Release: 1ms-8s",
             "",
-            "Velocity Sens:",
-            " Off, Trigger, or",
-            " Active (follows",
-            " current held note)"
+            "Velocity Sens: 0-1,",
+            " velocity to level.",
+            " The Off/Trigger/",
+            " Active mode is on",
+            " the Advanced page."
           ]
         },
         {
           "title": "LFO",
           "lines": [
+            "Knobs: Rate, Pitch,",
+            "Filter, PWM.",
+            "",
             "Rate: 0.02-40 Hz",
             "",
             "Waveform:",
@@ -115,6 +143,11 @@
             "",
             "Trigger:",
             " Free or Retrigger",
+            "",
+            "Sync: Free, or Sync",
+            " to snap the rate to",
+            " a fixed table",
+            " (0.125-32 Hz)",
             "",
             "Destinations:",
             " Pitch: vibrato",
@@ -130,6 +163,10 @@
         {
           "title": "Performance",
           "lines": [
+            "Knobs: Glide,",
+            "Portamento Mode,",
+            "Transpose, Octave.",
+            "",
             "Glide: 0-500ms",
             "",
             "Portamento Mode:",
@@ -148,7 +185,68 @@
             "  retrigger envelope",
             "",
             "Hold: sustain notes",
-            "Priority: Last/Low"
+            "",
+            "Transpose:",
+            " -24 to +24",
+            " semitones",
+            "Octave: -2 to +2",
+            " (sets Transpose",
+            "  in whole octaves)",
+            "Fine Tune:",
+            " -100 to +100 cents"
+          ]
+        },
+        {
+          "title": "Advanced",
+          "lines": [
+            "Knobs: Gate Trig",
+            "Mode, Priority,",
+            "Velocity Sens,",
+            "Same Note Quirk.",
+            "",
+            "Gate Trig Mode:",
+            " Gate: retrig only",
+            "  per Retrigger",
+            " Gate+Trig: retrig",
+            "  on every note",
+            " LFO: the LFO gates",
+            "  the VCA",
+            "",
+            "VCA Mode:",
+            " Envelope (amp env)",
+            " Gate (on/off)",
+            "",
+            "ADSR Declick: 0-1,",
+            " softens envelope",
+            " resets",
+            "",
+            "Priority: Last/Low",
+            "",
+            "Velocity Sens:",
+            " Off, Trigger, or",
+            " Active",
+            "",
+            "Same Note Quirk:",
+            " Off/On. In Gate+",
+            " Trig, a repeated",
+            " note does not",
+            " retrigger.",
+            "",
+            "Full Range: doubles",
+            " the filter env",
+            " depth. Positive",
+            " polarity only;",
+            " cutoff still spans",
+            " 20 Hz-18 kHz.",
+            "",
+            "Env Polarity:",
+            " Positive or",
+            " Negative (invert)",
+            "",
+            "Filter Volume Corr:",
+            " 0-1, adds level",
+            " back at high",
+            " resonance."
           ]
         }
       ]
@@ -156,15 +254,18 @@
     {
       "title": "MIDI",
       "lines": [
-        "Monophonic with",
-        "note stack (16).",
+        "Monophonic. Held",
+        "notes are tracked in",
+        "a 16-entry stack.",
         "",
         "Pitch Bend:",
         " 0-12 semitones",
         " (configurable)",
         "",
         "Mod Wheel (CC 1):",
-        " Filter modulation",
+        " scales all three",
+        " LFO depths - pitch,",
+        " filter and PWM.",
         "",
         "CC 123: All Notes Off"
       ]
